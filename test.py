@@ -10,7 +10,7 @@ from datetime import date, datetime;
 today = datetime.now().isoformat();
 
 options = webdriver.ChromeOptions()
-# options.add_argument('headless')
+options.add_argument('headless')
 
 driver = webdriver.Chrome(executable_path="./chromedriver", chrome_options=options);
 
