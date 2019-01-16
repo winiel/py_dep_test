@@ -10,9 +10,9 @@ projectPath = (os.path.dirname(os.path.realpath(__file__)) );
 
 
 options = webdriver.ChromeOptions()
-# options.add_argument('headless')
-# options.add_argument('window-size=1920x1080')
-# options.add_argument("disable-gpu")
+options.add_argument('headless')
+options.add_argument('window-size=1920x1080')
+options.add_argument("disable-gpu")
 #
 driver = webdriver.Chrome(executable_path="./chromedriver", chrome_options=options);
 
