@@ -4,6 +4,14 @@ from selenium.webdriver.support.ui import Select
 
 from bs4 import BeautifulSoup
 
+import os
+
+projectPath = (os.path.dirname(os.path.realpath(__file__)) );
+tmp = projectPath + "/vans_1.jpg";
+
+print(tmp);
+
+
 options = webdriver.ChromeOptions()
 options.add_argument('headless')
 options.add_argument('window-size=1920x1080')
@@ -67,7 +75,8 @@ driver.switch_to_window(windowSub)
 # btnImgClick.click();
 
 
-tmp = "/Users/winiel/Documents/test_image/vans_1.jpg";
+tmp = projectPath + "/vans_1.jpg";
+
 driver.find_element_by_css_selector("input[name='g_photo1']").send_keys(tmp);
 
 
