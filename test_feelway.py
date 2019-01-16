@@ -44,7 +44,7 @@ tmp = brand.select_by_visible_text("A.Testoni");
 
 
 
-soupDoc = BeautifulSoup(driver.page_source);
+soupDoc = BeautifulSoup(driver.page_source, 'html.parser');
 divPhoto_1 = soupDoc.find("div", {"id" : "g_photo1_div"});
 print( "divPhoto_1 - 1 : " +  str(divPhoto_1.get_text) );
 
@@ -75,7 +75,7 @@ driver.find_element_by_css_selector("input[value='상품사진등록하기']").c
 Alert(driver).accept();
 
 driver.switch_to_window(windowMain)
-soupDoc = BeautifulSoup(driver.page_source);
+soupDoc = BeautifulSoup(driver.page_source, 'html.parser');
 divPhoto_1 = soupDoc.find("div", {"id" : "g_photo1_div"});
 print( "divPhoto_1 - 2 : " +  str(divPhoto_1.get_text) );
 
